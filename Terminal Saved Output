@@ -1,0 +1,485 @@
+Last login: Sat Oct 28 13:16:47 on ttys000
+Manishas-MacBook-Air:~ manishavdave$ cd Do
+Documents/ Downloads/ 
+Manishas-MacBook-Air:~ manishavdave$ cd Documents/greyatoms/project/
+Manishas-MacBook-Air:project manishavdave$ pwd
+/Users/manishavdave/Documents/greyatoms/project
+Manishas-MacBook-Air:project manishavdave$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Manishas-MacBook-Air:project manishavdave$ git config --global --edit
+error: There was a problem with the editor 'vi'.
+Manishas-MacBook-Air:project manishavdave$ git config --global --edit
+Manishas-MacBook-Air:project manishavdave$ git init
+Initialized empty Git repository in /Users/manishavdave/Documents/greyatoms/project/.git/
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+	first.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manishas-MacBook-Air:project manishavdave$ git add first.py
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   first.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+Manishas-MacBook-Air:project manishavdave$ git commit -m "hello world printing"
+[master (root-commit) 1bf40e5] hello world printing
+ 1 file changed, 1 insertion(+)
+ create mode 100644 first.py
+Manishas-MacBook-Air:project manishavdave$ git log
+commit 1bf40e557c8d539862e927cd02b84254d8c221b3 (HEAD -> master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 14:57:43 2017 +0530
+
+    hello world printing
+Manishas-MacBook-Air:project manishavdave$ git remote add origin https://github.com/manisajnani/my-service.git
+Manishas-MacBook-Air:project manishavdave$ pwd
+/Users/manishavdave/Documents/greyatoms/project
+Manishas-MacBook-Air:project manishavdave$ git remote -v
+origin	https://github.com/manisajnani/my-service.git (fetch)
+origin	https://github.com/manisajnani/my-service.git (push)
+Manishas-MacBook-Air:project manishavdave$ pwd
+/Users/manishavdave/Documents/greyatoms/project
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manishas-MacBook-Air:project manishavdave$ pwd
+/Users/manishavdave/Documents/greyatoms/project
+Manishas-MacBook-Air:project manishavdave$ git stutus
+git: 'stutus' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manishas-MacBook-Air:project manishavdave$ git branch
+* master
+Manishas-MacBook-Air:project manishavdave$ git push -u origin master
+Username for 'https://github.com': manisajnani
+Password for 'https://manisajnani@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 239 bytes | 59.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/manisajnani/my-service.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Manishas-MacBook-Air:project manishavdave$ git config --global --edit
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manishas-MacBook-Air:project manishavdave$ ls
+first.py
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   first.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Manishas-MacBook-Air:project manishavdave$ git commit -m "added one more message, modified hello world message"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	modified:   first.py
+
+Untracked files:
+	.DS_Store
+
+no changes added to commit
+Manishas-MacBook-Air:project manishavdave$ git log
+commit 1bf40e557c8d539862e927cd02b84254d8c221b3 (HEAD -> master, origin/master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 14:57:43 2017 +0530
+
+    hello world printing
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   first.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Manishas-MacBook-Air:project manishavdave$ git push
+Everything up-to-date
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   first.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   first.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Manishas-MacBook-Air:project manishavdave$ git add first.py 
+Manishas-MacBook-Air:project manishavdave$ git commit -m "Third commit"
+[master b8f72f5] Third commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manishas-MacBook-Air:project manishavdave$ git push
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 287 bytes | 95.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/manisajnani/my-service.git
+   1bf40e5..b8f72f5  master -> master
+Manishas-MacBook-Air:project manishavdave$ git log
+commit b8f72f526d82e5eb98d63cfcb863e5a25c932a7a (HEAD -> master, origin/master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:14:27 2017 +0530
+
+    Third commit
+
+commit 1bf40e557c8d539862e927cd02b84254d8c221b3
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 14:57:43 2017 +0530
+
+    hello world printing
+Manishas-MacBook-Air:project manishavdave$ git add first.py 
+Manishas-MacBook-Air:project manishavdave$ git commit -m "fourth commit"
+[master 5aadfc9] fourth commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Manishas-MacBook-Air:project manishavdave$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 288 bytes | 96.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/manisajnani/my-service.git
+   b8f72f5..5aadfc9  master -> master
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+	date-util.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manishas-MacBook-Air:project manishavdave$ git add first.py
+Manishas-MacBook-Air:project manishavdave$ git commit -m "added hi"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+	.DS_Store
+	date-util.py
+
+nothing added to commit but untracked files present
+Manishas-MacBook-Air:project manishavdave$ git log
+commit 5aadfc9ec0b6b1fb81c5c0789ba40e97dd53468a (HEAD -> master, origin/master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:18:51 2017 +0530
+
+    fourth commit
+
+commit b8f72f526d82e5eb98d63cfcb863e5a25c932a7a
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:14:27 2017 +0530
+
+    Third commit
+
+commit 1bf40e557c8d539862e927cd02b84254d8c221b3
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 14:57:43 2017 +0530
+
+    hello world printing
+Manishas-MacBook-Air:project manishavdave$ git add first.py
+Manishas-MacBook-Air:project manishavdave$ git commit -m "added hi in message"
+[master b2ab8fa] added hi in message
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Manishas-MacBook-Air:project manishavdave$ git log
+commit b2ab8fae39941cc6873740687639b28fe974369b (HEAD -> master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:22:05 2017 +0530
+
+    added hi in message
+
+commit 5aadfc9ec0b6b1fb81c5c0789ba40e97dd53468a (origin/master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:18:51 2017 +0530
+
+    fourth commit
+
+commit b8f72f526d82e5eb98d63cfcb863e5a25c932a7a
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:14:27 2017 +0530
+
+    Third commit
+
+commit 1bf40e557c8d539862e927cd02b84254d8c221b3
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 14:57:43 2017 +0530
+
+    hello world printing
+Manishas-MacBook-Air:project manishavdave$ git add date-util.py 
+Manishas-MacBook-Air:project manishavdave$ git commit -m "added date util development start
+> "
+[master f71293e] added date util development start
+ 1 file changed, 3 insertions(+)
+ create mode 100644 date-util.py
+Manishas-MacBook-Air:project manishavdave$ git log
+commit f71293eb4e15195a2a5eb20a64c1019506f601b7 (HEAD -> master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:22:59 2017 +0530
+
+    added date util development start
+
+commit b2ab8fae39941cc6873740687639b28fe974369b
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:22:05 2017 +0530
+
+    added hi in message
+
+commit 5aadfc9ec0b6b1fb81c5c0789ba40e97dd53468a (origin/master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:18:51 2017 +0530
+
+    fourth commit
+
+commit b8f72f526d82e5eb98d63cfcb863e5a25c932a7a
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:14:27 2017 +0530
+
+    Third commit
+
+commit 1bf40e557c8d539862e927cd02b84254d8c221b3
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 14:57:43 2017 +0530
+
+    hello world printing
+Manishas-MacBook-Air:project manishavdave$ history >history
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+	history
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manishas-MacBook-Air:project manishavdave$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 604 bytes | 151.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/manisajnani/my-service.git
+   5aadfc9..f71293e  master -> master
+Manishas-MacBook-Air:project manishavdave$ git log
+commit f71293eb4e15195a2a5eb20a64c1019506f601b7 (HEAD -> master, origin/master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:22:59 2017 +0530
+
+    added date util development start
+
+commit b2ab8fae39941cc6873740687639b28fe974369b
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:22:05 2017 +0530
+
+    added hi in message
+
+commit 5aadfc9ec0b6b1fb81c5c0789ba40e97dd53468a
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:18:51 2017 +0530
+
+    fourth commit
+
+commit b8f72f526d82e5eb98d63cfcb863e5a25c932a7a
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:14:27 2017 +0530
+
+    Third commit
+
+commit 1bf40e557c8d539862e927cd02b84254d8c221b3
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 14:57:43 2017 +0530
+
+    hello world printing
+Manishas-MacBook-Air:project manishavdave$ git reset --hard b2ab8fae39941cc6873740687639b28fe974369b
+HEAD is now at b2ab8fa added hi in message
+Manishas-MacBook-Air:project manishavdave$ git push -f
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/manisajnani/my-service.git
+ + f71293e...b2ab8fa master -> master (forced update)
+Manishas-MacBook-Air:project manishavdave$ git log
+commit b2ab8fae39941cc6873740687639b28fe974369b (HEAD -> master, origin/master)
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:22:05 2017 +0530
+
+    added hi in message
+
+commit 5aadfc9ec0b6b1fb81c5c0789ba40e97dd53468a
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:18:51 2017 +0530
+
+    fourth commit
+
+commit b8f72f526d82e5eb98d63cfcb863e5a25c932a7a
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 16:14:27 2017 +0530
+
+    Third commit
+
+commit 1bf40e557c8d539862e927cd02b84254d8c221b3
+Author: Manisha <mani.sajnani@gmail.com>
+Date:   Sat Oct 28 14:57:43 2017 +0530
+
+    hello world printing
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+	history
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manishas-MacBook-Air:project manishavdave$ git fetch
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/manisajnani/my-service
+   b2ab8fa..ad30882  master     -> origin/master
+Manishas-MacBook-Air:project manishavdave$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+	history
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manishas-MacBook-Air:project manishavdave$ git pull
+Updating b2ab8fa..ad30882
+Fast-forward
+ first.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Manishas-MacBook-Air:project manishavdave$ git fetch
+Manishas-MacBook-Air:project manishavdave$ 

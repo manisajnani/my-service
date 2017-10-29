@@ -1,0 +1,77 @@
+    1  xcode-select --install
+    2  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install
+    3  q
+    4  quit
+    5  delete
+    6  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install)"
+    7  ll
+    8  list
+    9  sudo ll
+   10  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install)"
+   11  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install)"
+   12  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install)"
+   13  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install)"
+   14  /Volumes/DISK_IMG/Removable\ Disk/dnataxonomy_ ; exit;
+   15  /Volumes/DISK_IMG/dnataxonomy ; exit;
+   16  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   17  sudo rm ~rf ~/.atom/.commit-live/
+   18  sudo rm -rf ~/.atom/.commit-live/
+   19  ll
+   20  list
+   21  cd Documents/greyatoms/project/
+   22  ll
+   23  git
+   24  clear
+   25  ll
+   26  exit
+   27  cd Documents/greyatoms/project/
+   28  pwd
+   29  git
+   30  git config --global --edit
+   31  git config --global --edit
+   32  git init
+   33  git status
+   34  git add first.py
+   35  git status
+   36  git commit -m "hello world printing"
+   37  git log
+   38  git remote add origin https://github.com/manisajnani/my-service.git
+   39  pwd
+   40  git remote -v
+   41  pwd
+   42  git status
+   43  pwd
+   44  git stutus
+   45  git status
+   46  git branch
+   47  git push -u origin master
+   48  git config --global --edit
+   49  git status
+   50  ls
+   51  git status
+   52  git commit -m "added one more message, modified hello world message"
+   53  git log
+   54  git status
+   55  git push
+   56  git status
+   57  git status
+   58  git add first.py 
+   59  git commit -m "Third commit"
+   60  git status
+   61  git push
+   62  git log
+   63  git add first.py 
+   64  git commit -m "fourth commit"
+   65  git push
+   66  git status
+   67  git add first.py
+   68  git commit -m "added hi"
+   69  git log
+   70  git add first.py
+   71  git commit -m "added hi in message"
+   72  git log
+   73  git add date-util.py 
+   74  git commit -m "added date util development start
+"
+   75  git log
+   76  history >history
